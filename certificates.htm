@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Mohammed Aqueel | Web Developer | Online Certificates</title>
+        <link rel="shortcut icon" href="images/favicon.png" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" type="text/css" />
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700|PT+Sans:400,700&display=swap');
+            .container {
+                padding: 44px 8%;
+            }
+            h1 {
+                font-family: 'Noto Sans';
+                text-transform: uppercase;
+            }
+            .count {
+                padding-bottom: 64px;
+                font-family: 'Noto Sans';
+                color: #bfbfbf;
+            }
+            .certificate {
+                height: 160px;  width: 240px;
+                float: left;
+                margin: 0 12px 12px 0;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            }
+            .certificate:hover {
+                opacity: 0.9;
+                cursor: pointer;
+            }
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;    top: 0;
+                padding-top: 20px;
+                width: 100%;    height: 100%;
+                overflow: auto;
+                background-color: rgb(0,0,0);
+                background-color: rgba(0,0,0,0.9);
+            }
+            .modal-content {
+                margin: auto;
+                display: block;
+                height: 94%;
+                max-width: 100%;
+            }
+            .close {
+                position: absolute;
+                top: 15px;
+                right: 35px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+            }
+            .close:hover,.close:focus {
+                color: #bbb;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            .prev, .next {
+                font-family: 'Noto Sans';
+                font-size: 2em;
+                color: #fff;
+                padding: 24px;
+            }
+            .prev {
+                position: absolute;
+                left: 0;    top: 40%;
+            }
+            .next {
+                position: absolute;
+                right: 0;   top: 40%;
+            }
+            .prev:hover, .next:hover {
+                background: #333;
+                cursor: pointer;
+            }
+            .button {
+                font-size: 1.2em;
+                font-family: 'Noto Sans';
+                color: #fff;    background: #000;
+                padding: 12px;  border: none;
+            }
+            .button:hover {
+                background: #bfbfbf;
+                color: #000;
+                cursor: pointer;
+            }
+            .footer {
+                background: #bfbfbf;
+                padding: 24px 8% 8px 8%;
+                text-align: right;
+                font-family: 'Noto Sans';
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            
+            <h1>Online Certificates</h1>
+            
+            <div class="count"><span>All (30) / Spoken Tutorial (3) / Coursera (17) / SoloLearn (8) / Others (2)</span></div>
+        
+            <div class="certificate">
+                <img src="images/certificates/certificate (1).jpg" style="width: 100%; height: 100%;" id="image1" onclick="enable_modal(1);"></div>
+            
+            <div class="certificate">
+                <img src="images/certificates/certificate (2).png" style="width: 100%; height: 100%;" id="image2" onclick="enable_modal(2);"></div>
+            
+            <div class="certificate">
+                <img src="images/certificates/certificate (3).jpg" style="width: 100%; height: 100%;"  id="image3"  onclick="enable_modal(3);"></div>
+            
+            <div class="certificate">
+                <img src="images/certificates/certificate (4).png" style="width: 100%; height: 100%;" id="image4" onclick="enable_modal(4);"></div>
+            
+            <div class="certificate">
+                <img src="images/certificates/certificate (5).jpg" style="width: 100%; height: 100%;" id="image5" onclick="enable_modal(5);"></div>
+            
+            <div class="certificate">
+                <img src="images/certificates/certificate (6).png" style="width: 100%; height: 100%;" id="image6" onclick="enable_modal(6);"></div>
+            
+            <div class="certificate">
+                <img src="images/certificates/certificate (7).jpg" style="width: 100%; height: 100%;" id="image7" onclick="enable_modal(7);"></div>
+            
+            <div class="certificate">
+                <img src="images/certificates/certificate (8).png" style="width: 100%; height: 100%;" id="image8" onclick="enable_modal(8);"></div>
+            
+            <div class="certificate">
+                <img src="images/certificates/certificate (9).jpg" style="width: 100%; height: 100%;" id="image9" onclick="enable_modal(9);"></div>
+            
+            <div class="certificate">
+                <img src="images/certificates/certificate (10).png" style="width: 100%; height: 100%;" id="image10" onclick="enable_modal(10);"></div>
+            
+            <div class="certificate">
+                <img src="images/certificates/certificate (11).jpg" style="width: 100%; height: 100%;" id="image11" onclick="enable_modal(11);"></div>
+            
+            <div class="certificate">
+                <img src="images/certificates/certificate (12).png" style="width: 100%; height: 100%;" id="image12" onclick="enable_modal(12);"></div>
+            
+            <div class="certificate">
+                <img src="images/certificates/certificate (13).jpg" style="height: 100%; padding-left: 26%;" id="image13" onclick="enable_modal(13);"></div>
+            
+            <div class="certificate">
+                <img src="images/certificates/certificate (14).png" style="width: 100%; height: 100%;" id="image14" onclick="enable_modal(14);"></div>
+            
+            <div class="certificate">
+                <img src="images/certificates/certificate (15).jpg" style="width: 100%; height: 100%;" id="image15" onclick="enable_modal(15);"></div>
+            
+            <div class="certificate">
+                <img src="images/certificates/certificate (16).png" style="width: 100%; height: 100%;" id="image16" onclick="enable_modal(16);"></div>
+            
+            <div class="certificate">
+                <img src="images/certificates/certificate (17).jpg" style="width: 100%; height: 100%;" id="image17" onclick="enable_modal(17);"></div>
+            
+            <div class="certificate">
+                <img src="images/certificates/certificate (18).png" style="width: 100%; height: 100%;" id="image18" onclick="enable_modal(18);"></div>
+            
+            <div class="certificate">
+                <img src="images/certificates/certificate (19).jpg" style="width: 100%; height: 100%;" id="image19" onclick="enable_modal(19);"></div>
+            
+            <div class="certificate">
+                <img src="images/certificates/certificate (20).png" style="width: 100%; height: 100%;" id="image20" onclick="enable_modal(20);"></div>
+            
+            <div class="certificate">
+                <img src="images/certificates/certificate (21).jpg" style="width: 100%; height: 100%;" id="image21" onclick="enable_modal(21);"></div>
+            
+            <div class="certificate">
+                <img src="images/certificates/certificate (22).png" style="width: 100%; height: 100%;" id="image22" onclick="enable_modal(22);"></div>
+            
+            <div class="certificate">
+                <img src="images/certificates/certificate (23).png" style="width: 100%; height: 100%;" id="image23" onclick="enable_modal(23);"></div>
+            
+            <div class="certificate">
+                <img src="images/certificates/certificate (24).png" style="width: 100%; height: 100%;" id="image24" onclick="enable_modal(24);"></div>
+            
+            <div class="certificate">
+                <img src="images/certificates/certificate (25).png" style="width: 100%; height: 100%;" id="image25" onclick="enable_modal(25);"></div>
+            
+            <div class="certificate">
+                <img src="images/certificates/certificate (26).png" style="width: 100%; height: 100%;" id="image26" onclick="enable_modal(26);"></div>
+            
+            <div class="certificate">
+                <img src="images/certificates/certificate (27).png" style="width: 100%; height: 100%;" id="image27" onclick="enable_modal(27);"></div>
+            
+            <div class="certificate">
+                <img src="images/certificates/certificate (28).png" style="width: 100%; height: 100%;" id="image28" onclick="enable_modal(28);"></div>
+            
+            <div class="certificate">
+                <img src="images/certificates/certificate (29).png" style="width: 100%; height: 100%;" id="image29" onclick="enable_modal(29);"></div>
+            
+            <div class="certificate">
+                <img src="images/certificates/certificate (30).png" style="width: 100%; height: 100%;" id="image30" onclick="enable_modal(30);"></div>
+        </div>
+        <div style="clear: left; padding: 34px 0 34px 8%;">
+            <a href="index.htm"><button class="button">Back</button></a>
+        </div>
+        <div class="footer">
+            <h4>MOHAMMED AQUEEL</h4>
+        </div>
+        <div id="myModal" class="modal">
+            <span class="close" onclick="disable_modal();">&times;</span>
+            <img class="modal-content" id="modal_image">
+            <span class="prev" onclick="previous()"><li class="fa fa-angle-left"></li></span>
+            <span class="next" onclick="next()"><li class="fa fa-angle-right"></li></span>
+        </div>
+        
+        
+        <script type="text/javascript">
+            function enable_modal(x) {
+                image = x;
+                window.img = image;
+                document.getElementById("myModal").style.display = "block";
+                document.getElementById("modal_image").src = document.getElementById("image"+image).src;
+            }
+            function disable_modal() {
+                document.getElementById("myModal").style.display = "none";
+            }
+            function previous() {
+                var im = window.img - 1;
+                document.getElementById("modal_image").src = document.getElementById("image"+im).src;
+                window.img = im;
+            }
+            function next() {
+                var im = window.img + 1;
+                document.getElementById("modal_image").src = document.getElementById("image"+im).src;
+                window.img = im;
+            }
+        </script>
+    </body>
+</html>
