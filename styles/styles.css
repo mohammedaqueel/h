@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700|PT+Sans:400,700&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+body, * {
+    margin: 0;
+}
+/* ----- Divs & Headings----- */
+.divs {
+    padding: 44px 8%;
+    min-height: 100vh;
+}
+.heading_1 {
+    font-family: 'Noto Sans';
+    font-size: 2.4em;
+    letter-spacing: 2px;
+    padding: 24px 0;
+    text-transform: uppercase;
+}
+.heading_2 {
+    font-family: 'Noto Sans';
+    text-transform: uppercase;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+/* ----- Hero ----- */
+.first_div {
+    font-family: 'Noto Sans';
+    letter-spacing: 4px;
+    background-color: #000;
+    background-image: url("../images/background_texture.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    min-height: 78vh;
+    text-align: center;
+    color: #fff;
+    padding-top: 138px;
+    text-transform: uppercase;
+}
+.first_div h1 {
+    font-size: 4em;
+}
+.first_div .first_div_span {
+    font-size: 1.4em;
+    line-height: 0;
+}
+.first_div h4 {
+    font-size: 3em;
+}
+.scroll_down {
+    font-family: 'PT Sans';
+    color: #fff;
+    letter-spacing: 0;
+    padding-top: 162px;
+    text-transform: none;
+}
+.scroll_down .sc_icon {
+    margin: 14px;
+    font-size: 12px;
+}
+/* ----- About me ----- */
+.intro {
+    font-family: 'PT Sans';
+    font-size: 1.8em;
+    width: 58%;
+    padding-top: 28px;
+}
+/* ----- To Top ----- */
+.to_top {
+    font-size: 1.4em;
+    float: right;
+    padding-right: 8%;
+}
+.to_top li {
+    color: #000;
+    padding: 18px;
+    background: #f2f2f2;
+}
+.to_top li:hover {
+    background: #ccc;
+    color: #fff;
+    cursor: pointer;
+}
+/* ----- Projects ----- */
+a {
+    color: #333;
+}
+.card {
+    float: left;
+    margin: 0 12px 12px 0;
+    font-family: 'PT Sans';
+    height: 264px;  width: 210px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.card img {
+    width: 100%;
+}
+.card h4 {
+    font-size: 1.3em;
+    color: #000;
+}
+.card p {
+    font-weight: bold;
+    color: #000;
+    padding-top: 6px;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+    cursor: pointer;
+}
+.card_body {
+  padding: 12px 16px;
+}
+.view_more_1, .view_more_2 {
+    color: #333;
+    height: 168px;
+    width: 210px;
+    font-size: 2.2em;
+    overflow: auto;
+    margin: 0 12px 12px 0;
+    text-align: center;
+    padding-top: 94px;
+}
+.view_more_1 {
+    display: none;
+}
+.sm_icon {
+    text-align: center;
+    padding: 16px 24px;
+}
+.sm_icon:hover {
+    cursor: pointer;
+    color: #fff;
+    background: #bfbfbf;
+}
+/* ----- Achievements ----- */
+.prog_skills {
+    float: right;
+    width: 214px;
+    padding: 18px 12px;
+    border-top: 2px solid #bfbfbf;
+    border-bottom: 2px solid #bfbfbf;
+}
+.sets {
+    margin: 8px 12px;
+    font-family: 'PT Sans';
+    font-weight: bold;
+    font-size: 1em;
+    letter-spacing: 2px;
+}
+.pbar1 {
+    margin: 12px 0;
+    width: 100%;
+    height: 18px;
+    background: #bfbfbf;
+    border-radius: 12px 0 12px 0;
+}
+.pbar2 {
+    height: 18px;
+    background: #333;
+    border-radius: 12px 0 12px 0;
+}
+.certificates {
+    overflow: auto;
+    padding-right: 24px;
+}
+.certificates2 {
+    margin-top: 14px;
+}
+.certificate {
+    height: 160px;  width: 240px;
+    float: left;
+    margin: 0 12px 12px 0;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.certificate:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+.view_more_2 {
+    height: 114px;
+    width: 240px;
+    padding-top: 44px;
+}
+.view_more_2 a {
+    text-decoration: none;
+    color: #000;
+}
+/* ----- Contact ----- */
+form label {
+    font-size: 1.4em;
+    font-family: 'PT Sans';
+}
+form input[type=text], form input[type=email], form textarea {
+    font-size: 1.2em;
+    margin: 12px 0;
+    font-family: 'PT Sans';
+    padding: 8px;
+    border: 1px solid #333;
+}
+input[type=submit] {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-family: 'PT Sans';
+    font-weight: bold;
+    background: #000;
+    color: #fff;
+    border: 0;  padding: 14px;
+}
+input[type=submit]:hover {
+    background: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+/* ----- Social Media ----- */
+.social_media {
+    background: #bfbfbf;
+    padding: 0 8%;
+    text-align: right;
+    font-size: 1.2em;
+}
+.sm_icons {
+    color: #000;
+    padding: 12px;
+}
+.sm_icons:hover {
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+/* ----- Footer ----- */
+.div_footer {
+    font-family: 'PT Sans';
+    background-color: #000;
+    background-image: url("../images/background_texture.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    min-height: 8vh;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 34px 8%;
+    text-align: right;
+}
+/* ----- Certificate Modal ----- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;    top: 0;
+    padding-top: 20px;
+    width: 100%;    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+.modal-content {
+    margin: auto;
+    display: block;
+    height: 94%;
+    max-width: 100%;
+}
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
