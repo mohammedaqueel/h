@@ -278,4 +278,9 @@ input[type=submit]:hover {
   body {
     background-color: lightblue;
   }
+    .divs {
+        width: 100%;
+        padding: 44px 2%;
+    }
+
 }
