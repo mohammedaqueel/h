@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Mohammed Aqueel | JavaScript Calculator</title>
+        <link rel="shortcut icon" href="../images/favicon.png" />
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700|PT+Sans:400,700&display=swap');
+			body, * {
+				margin: 0;
+			}
+            .container {
+                text-align: center;
+                padding-top: 120px;
+                font-family: 'PT Sans';
+                font-size: 1.2em;
+            }
+            input[type=number] {
+                font-family: 'PT Sans';
+                font-size: 1.2em;
+                padding: 4px;
+                margin: 12px 0;
+            }
+            button {
+                font-family: 'PT Sans';
+                font-size: 1.2em;
+                font-weight: bold;
+                padding: 4px 18px;
+                margin: 2px;
+                background: #000;
+                color: #fff;
+                border: 0;
+            }
+            button:hover {
+                background: #ccc;
+                color: #000;
+                cursor: pointer;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <label>Value 1 :</label><br /><input type="number" id="num1" /><br />
+            <label>Value 2 :</label><br /><input type="number" id="num2" /><br />
+            <button onclick="add()"> + </button><button onclick="sub()"> - </button><button onclick="mul()"> x </button><button onclick="div()"> / </button><br />
+            <input type="number" id="answer" disabled />
+        </div>
+        <div style="float: right; background: #bfbfbf; font-family: 'Noto Sans'; font-size: 0.8em; padding: 24px; font-weight: bold; margin-top: 52px;">
+            BY : <br /><a href="../index.htm" style="text-decoration: none; color: #000;">MOHAMMED AQUEEL</a>
+        </div>
+        <script type="text/javascript">
+            function add() {
+                var val = parseInt(document.getElementById("num1").value)+parseInt(document.getElementById("num2").value);
+                document.getElementById("answer").value = val;
+            }
+            function sub() {
+                var val = parseInt(document.getElementById("num1").value)-parseInt(document.getElementById("num2").value);
+                document.getElementById("answer").value = val;
+            }
+            function mul() {
+                var val = parseInt(document.getElementById("num1").value)*parseInt(document.getElementById("num2").value);
+                document.getElementById("answer").value = val;
+            }
+            function div() {
+                var val = parseInt(document.getElementById("num1").value)/parseInt(document.getElementById("num2").value);
+                document.getElementById("answer").value = val;
+            }
+        </script>
+    </body>
+</html>
