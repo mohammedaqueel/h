@@ -1,8 +1,8 @@
 var date = new Date();
             
-var startDate = new Date("Aug 26, 2020 07:30:00");
+var startDate = new Date("Sep 07, 2020 18:00:00");
             
-var endDate = new Date("Nov 24, 2020 07:30:00");
+var endDate = new Date("Oct 01, 2020 18:00:00");
 
 var totalDays = endDate.getTime() - startDate.getTime();
 totalDays = Math.floor( totalDays / (1000 * 60 * 60 * 24));
