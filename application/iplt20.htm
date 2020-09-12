@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>IPL - 2020</title>
+        <link rel="icon" href="https://i.pinimg.com/originals/e2/2f/9c/e22f9c20556bca1c205422c071d5552a.png" sizes="16x16">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style type="text/css">
+            @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: 'PT Sans', sans-serif;
+                box-sizing: border-box;
+            }
+            body {
+                background-image: linear-gradient(to left, #900, #000);
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #iplt20 div {
+                background-color: #111;
+                color: #fff;
+                width: 78vw;
+                font-size: 24px;
+                padding: 18px;
+                margin: 28px 0;
+                text-align: center;
+                box-shadow: 2px 2px 8px 2px #000;
+            }
+            #iplt20 div span:nth-child(1) {
+                font-size: 18px;
+                background-color: #039;
+                padding: 12px;
+                font-weight: 900;
+                border-radius: 50%;
+                box-shadow: 1px 1px 6px 1px #000;
+            }
+            #iplt20 div span:nth-child(2) {
+                margin: 32px;
+                display: inline-block;
+                border-bottom: 1px solid #f7f7f7;
+                font-size: 22px;
+                letter-spacing: 2px;
+            }
+            #iplt20 div img {
+                vertical-align: middle;
+                width: 52px;
+                margin-right: 8px;
+            }
+            .text {
+                position: fixed;
+                top: 0;
+                font-size: 22px;
+                color: #fff;
+                text-align: center;
+                background-color: #111;
+                padding: 28px;
+                max-width: 92vw;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="text"></div>
+        <div id="iplt20"></div>
+        <script type="text/javascript">
+            var arr = new Array (
+                "<div><span>1</span><span>ABU DHABI</span><br /><img src='https://i.pinimg.com/originals/28/09/a8/2809a841bb08827603ccac5c6aee8b33.png' />MUMBAI INDIANS vs <img src='https://www.searchpng.com/wp-content/uploads/2019/02/Chennai-Super-Kings-Logo-PNG-Image-.png' />CHENNAI SUPER KINGS</div>",
+                
+                "<div><span>2</span><span>DUBAI</span><br /><img src='https://cdn.freelogovectors.net/wp-content/uploads/2019/09/delhi-capitals-logo.png' />DELHI CAPITALS vs <img src='https://i.pinimg.com/originals/25/d5/52/25d552963b3d186a60efc1306870bbd1.png' />KINGS XI PUNJAB</div>",
+                
+                "<div><span>3</span><span>DUBAI</span><br /><img src='https://www.searchpng.com/wp-content/uploads/2019/02/Sunrisers-Hyderabad-Logo-PNG-Image.png' />SUNRISERS HYDERABAD vs <img src='https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Royal_Challengers_Bangalore_2020.svg/1200px-Royal_Challengers_Bangalore_2020.svg.png' />ROYAL CHALLENGERS BANGALORE</div>",
+                
+                "<div><span>4</span><span>SHARJAH</span><br /><img src='https://www.rajasthanroyals.com/assets/images/RR_blue%20(1).png' />RAJASTHAN ROYALS vs <img src='https://www.searchpng.com/wp-content/uploads/2019/02/Chennai-Super-Kings-Logo-PNG-Image-.png' />CHENNAI SUPER KINGS</div>",
+                
+                "<div><span>5</span><span>ABU DHABI</span><br /><img src='https://cdn.freelogovectors.net/wp-content/uploads/2018/04/Kolkata-Knight-Riders-Logo_freelogovectors.net_.png' />KOLKATA KNIGHT RIDERS vs <img src='https://i.pinimg.com/originals/28/09/a8/2809a841bb08827603ccac5c6aee8b33.png' />MUMBAI INDIANS</div>",
+                
+                "<div><span>6</span><span>DUBAI</span><br /><img src='https://i.pinimg.com/originals/25/d5/52/25d552963b3d186a60efc1306870bbd1.png' />KINGS XI PUNJAB vs <img src='https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Royal_Challengers_Bangalore_2020.svg/1200px-Royal_Challengers_Bangalore_2020.svg.png' />ROYAL CHALLENGERS BANGALORE</div>",
+                
+                "<div><span>7</span><span>DUBAI</span><br /><img src='https://www.searchpng.com/wp-content/uploads/2019/02/Chennai-Super-Kings-Logo-PNG-Image-.png' />CHENNAI SUPER KINGS vs <img src='https://cdn.freelogovectors.net/wp-content/uploads/2019/09/delhi-capitals-logo.png' />DELHI CAPITALS</div>",
+                
+                "<div><span>8</span><span>ABU DHABI</span><br /><img src='https://cdn.freelogovectors.net/wp-content/uploads/2018/04/Kolkata-Knight-Riders-Logo_freelogovectors.net_.png' />KOLKATA KNIGHT RIDERS vs <img src='https://www.searchpng.com/wp-content/uploads/2019/02/Sunrisers-Hyderabad-Logo-PNG-Image.png' />SUNRISERS HYDERABAD</div>",
+                
+                "<div><span>9</span><span>SHARJAH</span><br /><img src='https://www.rajasthanroyals.com/assets/images/RR_blue%20(1).png' />RAJASTHAN ROYALS vs <img src='https://i.pinimg.com/originals/25/d5/52/25d552963b3d186a60efc1306870bbd1.png' />KINGS XI PUNJAB</div>",
+                
+                "<div><span>10</span><span>DUBAI</span><br /><img src='https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Royal_Challengers_Bangalore_2020.svg/1200px-Royal_Challengers_Bangalore_2020.svg.png' />ROYAL CHALLENGERS BANGALORE vs <img src='https://i.pinimg.com/originals/28/09/a8/2809a841bb08827603ccac5c6aee8b33.png' />MUMBAI INDIANS</div>",
+                
+                "<div><span>11</span><span>ABU DHABI</span><br /><img src='https://cdn.freelogovectors.net/wp-content/uploads/2019/09/delhi-capitals-logo.png' />DELHI CAPITALS vs <img src='https://www.searchpng.com/wp-content/uploads/2019/02/Sunrisers-Hyderabad-Logo-PNG-Image.png' />SUNRISERS HYDERABAD</div>",
+                
+                "<div><span>12</span><span>DUBAI</span><br /><img src='https://www.rajasthanroyals.com/assets/images/RR_blue%20(1).png' />RAJASTHAN ROYALS vs <img src='https://cdn.freelogovectors.net/wp-content/uploads/2018/04/Kolkata-Knight-Riders-Logo_freelogovectors.net_.png' />KOLKATA KNIGHT RIDERS</div>",
+                
+                "<div><span>13</span><span>ABU DHABI</span><br /><img src='https://i.pinimg.com/originals/25/d5/52/25d552963b3d186a60efc1306870bbd1.png' />KINGS XI PUNJAB vs <img src='https://i.pinimg.com/originals/28/09/a8/2809a841bb08827603ccac5c6aee8b33.png' />MUMBAI INDIANS</div>",
+                
+                "<div><span>14</span><span>DUBAI</span><br /><img src='https://www.searchpng.com/wp-content/uploads/2019/02/Chennai-Super-Kings-Logo-PNG-Image-.png' />CHENNAI SUPER KINGS vs <img src='https://www.searchpng.com/wp-content/uploads/2019/02/Sunrisers-Hyderabad-Logo-PNG-Image.png' />SUNRISERS HYDERABAD</div>",
+                
+                "<div><span>15</span><span>ABU DHABI</span><br /><img src='https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Royal_Challengers_Bangalore_2020.svg/1200px-Royal_Challengers_Bangalore_2020.svg.png' />ROYAL CHALLENGERS BANGALORE vs <img src='https://www.rajasthanroyals.com/assets/images/RR_blue%20(1).png' />RAJASTHAN ROYALS</div><div><span>16</span><span>SHARJAH</span><br /><img src='https://cdn.freelogovectors.net/wp-content/uploads/2019/09/delhi-capitals-logo.png' />DELHI CAPITALS vs <img src='https://cdn.freelogovectors.net/wp-content/uploads/2018/04/Kolkata-Knight-Riders-Logo_freelogovectors.net_.png' />KOLKATA KNIGHT RIDERS</div>",
+                
+                "<div><span>17</span><span>SHARJAH</span><br /><img src='https://i.pinimg.com/originals/28/09/a8/2809a841bb08827603ccac5c6aee8b33.png' />MUMBAI INDIANS vs <img src='https://www.searchpng.com/wp-content/uploads/2019/02/Sunrisers-Hyderabad-Logo-PNG-Image.png' />SUNRISERS HYDERABAD</div><div><span>18</span><span>DUBAI</span><br /><img src='https://i.pinimg.com/originals/25/d5/52/25d552963b3d186a60efc1306870bbd1.png' />KINGS XI PUNJAB vs <img src='https://www.searchpng.com/wp-content/uploads/2019/02/Chennai-Super-Kings-Logo-PNG-Image-.png' />CHENNAI SUPER KINGS</div>",
+                
+                "<div><span>19</span><span>DUBAI</span><br /><img src='https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Royal_Challengers_Bangalore_2020.svg/1200px-Royal_Challengers_Bangalore_2020.svg.png' />ROYAL CHALLENGERS BANGALORE vs <img src='https://cdn.freelogovectors.net/wp-content/uploads/2019/09/delhi-capitals-logo.png' />DELHI CAPITALS</div>",
+                
+                "<div><span>20</span><span>ABU DHABI</span><br /><img src='https://i.pinimg.com/originals/28/09/a8/2809a841bb08827603ccac5c6aee8b33.png' />MUMBAI INDIANS vs <img src='https://www.rajasthanroyals.com/assets/images/RR_blue%20(1).png' />RAJASTHAN ROYALS</div>",
+                
+                "<div><span>21</span><span>ABU DHABI</span><br /><img src='https://cdn.freelogovectors.net/wp-content/uploads/2018/04/Kolkata-Knight-Riders-Logo_freelogovectors.net_.png' />KOLKATA KNIGHT RIDERS vs <img src='https://www.searchpng.com/wp-content/uploads/2019/02/Chennai-Super-Kings-Logo-PNG-Image-.png' />CHENNAI SUPER KINGS</div>",
+                
+                "<div><span>22</span><span>DUBAI</span><br /><img src='https://www.searchpng.com/wp-content/uploads/2019/02/Sunrisers-Hyderabad-Logo-PNG-Image.png' />SUNRISERS HYDERABAD vs <img src='https://i.pinimg.com/originals/25/d5/52/25d552963b3d186a60efc1306870bbd1.png' />KINGS XI PUNJAB</div>",
+                
+                "<div><span>23</span><span>SHARJAH</span><br /><img src='https://www.rajasthanroyals.com/assets/images/RR_blue%20(1).png' />RAJASTHAN ROYALS vs <img src='https://cdn.freelogovectors.net/wp-content/uploads/2019/09/delhi-capitals-logo.png' />DELHI CAPITALS</div>",
+                
+                "<div><span>24</span><span>ABU DHABI</span><br /><img src='https://i.pinimg.com/originals/25/d5/52/25d552963b3d186a60efc1306870bbd1.png' />KINGS XI PUNJAB vs <img src='https://cdn.freelogovectors.net/wp-content/uploads/2018/04/Kolkata-Knight-Riders-Logo_freelogovectors.net_.png' />KOLKATA KNIGHT RIDERS</div><div><span>25</span><span>DUBAI</span><br /><img src='https://www.searchpng.com/wp-content/uploads/2019/02/Chennai-Super-Kings-Logo-PNG-Image-.png' />CHENNAI SUPER KINGS vs <img src='https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Royal_Challengers_Bangalore_2020.svg/1200px-Royal_Challengers_Bangalore_2020.svg.png' />ROYAL CHALLENGERS BANGALORE</div>",
+                
+                "<div><span>26</span><span>DUBAI</span><br /><img src='https://www.searchpng.com/wp-content/uploads/2019/02/Sunrisers-Hyderabad-Logo-PNG-Image.png' />SUNRISERS HYDERABAD vs <img src='https://www.rajasthanroyals.com/assets/images/RR_blue%20(1).png' />RAJASTHAN ROYALS</div><div><span>27</span>ABU DHABI</span><br /><img src='https://i.pinimg.com/originals/28/09/a8/2809a841bb08827603ccac5c6aee8b33.png' />MUMBAI INDIANS vs <img src='https://cdn.freelogovectors.net/wp-content/uploads/2019/09/delhi-capitals-logo.png' />DELHI CAPITALS</div>",
+                
+                "<div><span>28</span><span>SHARJAH</span><br /><img src='https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Royal_Challengers_Bangalore_2020.svg/1200px-Royal_Challengers_Bangalore_2020.svg.png' />ROYAL CHALLENGERS BANGALORE vs <img src='https://cdn.freelogovectors.net/wp-content/uploads/2018/04/Kolkata-Knight-Riders-Logo_freelogovectors.net_.png' />KOLKATA KNIGHT RIDERS</div>",
+                
+                "<div><span>29</span><span>DUBAI</span><br /><img src='https://www.searchpng.com/wp-content/uploads/2019/02/Sunrisers-Hyderabad-Logo-PNG-Image.png' />SUNRISERS HYDERABAD vs <img src='https://www.searchpng.com/wp-content/uploads/2019/02/Chennai-Super-Kings-Logo-PNG-Image-.png' />CHENNAI SUPER KINGS</div>",
+                
+                "<div><span>30</span><span>DUBAI</span><br /><img src='https://cdn.freelogovectors.net/wp-content/uploads/2019/09/delhi-capitals-logo.png' />DELHI CAPITALS vs <img src='https://www.rajasthanroyals.com/assets/images/RR_blue%20(1).png' />RAJASTHAN ROYALS</div>",
+                
+                "<div><span>31</span><span>SHARJAH</span><br /><img src='https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Royal_Challengers_Bangalore_2020.svg/1200px-Royal_Challengers_Bangalore_2020.svg.png' />ROYAL CHALLENGERS BANGALORE vs <img src='https://i.pinimg.com/originals/25/d5/52/25d552963b3d186a60efc1306870bbd1.png' />KINGS XI PUNJAB</div>",
+                
+                "<div><span>32</span><span>ABU DHABI</span><br /><img src='https://i.pinimg.com/originals/28/09/a8/2809a841bb08827603ccac5c6aee8b33.png' />MUMBAI INDIANS vs <img src='https://cdn.freelogovectors.net/wp-content/uploads/2018/04/Kolkata-Knight-Riders-Logo_freelogovectors.net_.png' />KOLKATA KNIGHT RIDERS</div>",
+                
+                "<div><span>33</span><span>DUBAI</span><br /><img src='https://www.rajasthanroyals.com/assets/images/RR_blue%20(1).png' />RAJASTHAN ROYALS vs <img src='https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Royal_Challengers_Bangalore_2020.svg/1200px-Royal_Challengers_Bangalore_2020.svg.png' />ROYAL CHALLENGERS BANGALORE</div><div><span>34</span><span>SHARJAH</span><br /><img src='https://cdn.freelogovectors.net/wp-content/uploads/2019/09/delhi-capitals-logo.png' />DELHI CAPITALS vs <img src='https://www.searchpng.com/wp-content/uploads/2019/02/Chennai-Super-Kings-Logo-PNG-Image-.png' />CHENNAI SUPER KINGS</div>",
+                
+                "<div><span>35</span><span>ABU DHABI</span><br /><img src='https://www.searchpng.com/wp-content/uploads/2019/02/Sunrisers-Hyderabad-Logo-PNG-Image.png' />SUNRISERS HYDERABAD vs <img src='https://cdn.freelogovectors.net/wp-content/uploads/2018/04/Kolkata-Knight-Riders-Logo_freelogovectors.net_.png' />KOLKATA KNIGHT RIDERS</div><div><span>36<span>DUBAI</span><br /><img src='https://i.pinimg.com/originals/28/09/a8/2809a841bb08827603ccac5c6aee8b33.png' />MUMBAI INDIANS vs <img src='https://i.pinimg.com/originals/25/d5/52/25d552963b3d186a60efc1306870bbd1.png' />KINGS XI PUNJAB</div>",
+                
+                "<div><span>37</span><span>ABU DHABI</span><br /><img src='https://www.searchpng.com/wp-content/uploads/2019/02/Chennai-Super-Kings-Logo-PNG-Image-.png' />CHENNAI SUPER KINGS vs <img src='https://www.rajasthanroyals.com/assets/images/RR_blue%20(1).png' />RAJASTHAN ROYALS</div>",
+                
+                "<div><span>38</span><span>DUBAI</span><br /><img src='https://i.pinimg.com/originals/25/d5/52/25d552963b3d186a60efc1306870bbd1.png' />KINGS XI PUNJAB vs <img src='https://cdn.freelogovectors.net/wp-content/uploads/2019/09/delhi-capitals-logo.png' />DELHI CAPITALS</div>",
+                
+                "<div><span>39</span><span>ABU DHABI</span><br /><img src='https://cdn.freelogovectors.net/wp-content/uploads/2018/04/Kolkata-Knight-Riders-Logo_freelogovectors.net_.png' />KOLKATA KNIGHT RIDERS vs <img src='https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Royal_Challengers_Bangalore_2020.svg/1200px-Royal_Challengers_Bangalore_2020.svg.png' />ROYAL CHALLENGERS BANGALORE</div>",
+                
+                "<div><span>40</span><span>DUBAI</span><br /><img src='https://www.rajasthanroyals.com/assets/images/RR_blue%20(1).png' />RAJASTHAN ROYALS vs <img src='https://www.searchpng.com/wp-content/uploads/2019/02/Sunrisers-Hyderabad-Logo-PNG-Image.png' />SUNRISERS HYDERABAD</div>",
+                
+                "<div><span>41</span><span>SHARJAH</span><br /><img src='https://www.searchpng.com/wp-content/uploads/2019/02/Chennai-Super-Kings-Logo-PNG-Image-.png' />CHENNAI SUPER KINGS vs <img src='https://i.pinimg.com/originals/28/09/a8/2809a841bb08827603ccac5c6aee8b33.png' />MUMBAI INDIANS</div>",
+                
+                "<div><span>42</span><span>ABU DHABI</span><br /><img src='https://cdn.freelogovectors.net/wp-content/uploads/2018/04/Kolkata-Knight-Riders-Logo_freelogovectors.net_.png' />KOLKATA KNIGHT RIDERS vs <img src='https://cdn.freelogovectors.net/wp-content/uploads/2019/09/delhi-capitals-logo.png' />DELHI CAPITALS</div><div><span>43</span><span>DUBAI</span><br /><img src='https://i.pinimg.com/originals/25/d5/52/25d552963b3d186a60efc1306870bbd1.png' />KINGS XI PUNJAB vs <img src='https://www.searchpng.com/wp-content/uploads/2019/02/Sunrisers-Hyderabad-Logo-PNG-Image.png' />SUNRISERS HYDERABAD</div>",
+                
+                "<div><span>44</span><span>DUBAI</span><br /><img src='https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Royal_Challengers_Bangalore_2020.svg/1200px-Royal_Challengers_Bangalore_2020.svg.png' />ROYAL CHALLENGERS BANGALORE vs <img src='https://www.searchpng.com/wp-content/uploads/2019/02/Chennai-Super-Kings-Logo-PNG-Image-.png' />CHENNAI SUPER KINGS</div><div><span>45</span><span>ABU DHABI</span><br /><img src='https://www.rajasthanroyals.com/assets/images/RR_blue%20(1).png' />RAJASTHAN ROYALS vs <img src='https://i.pinimg.com/originals/28/09/a8/2809a841bb08827603ccac5c6aee8b33.png' />MUMBAI INDIANS</div>",
+                
+                "<div><span>46</span><span>SHARJAH</span><br /><img src='https://cdn.freelogovectors.net/wp-content/uploads/2018/04/Kolkata-Knight-Riders-Logo_freelogovectors.net_.png' />KOLKATA KNIGHT RIDERS vs <img src='https://i.pinimg.com/originals/25/d5/52/25d552963b3d186a60efc1306870bbd1.png' />KINGS XI PUNJAB</div>",
+                
+                "<div><span>47</span><span>DUBAI</span><br /><img src='https://www.searchpng.com/wp-content/uploads/2019/02/Sunrisers-Hyderabad-Logo-PNG-Image.png' />SUNRISERS HYDERABAD vs <img src='https://cdn.freelogovectors.net/wp-content/uploads/2019/09/delhi-capitals-logo.png' />DELHI CAPITALS</div>",
+                
+                "<div><span>48</span><span>ABU DHABI</span><br /><img src='https://i.pinimg.com/originals/28/09/a8/2809a841bb08827603ccac5c6aee8b33.png' />MUMBAI INDIANS vs <img src='https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Royal_Challengers_Bangalore_2020.svg/1200px-Royal_Challengers_Bangalore_2020.svg.png' />ROYAL CHALLENGERS BANGALORE</div>",
+                
+                "<div><span>49</span><span>DUBAI</span><br /><img src='https://www.searchpng.com/wp-content/uploads/2019/02/Chennai-Super-Kings-Logo-PNG-Image-.png' />CHENNAI SUPER KINGS vs <img src='https://cdn.freelogovectors.net/wp-content/uploads/2018/04/Kolkata-Knight-Riders-Logo_freelogovectors.net_.png' />KOLKATA KNIGHT RIDERS</div>",
+                
+                "<div><span>50</span><span>ABU DHABI</span><br /><img src='https://i.pinimg.com/originals/25/d5/52/25d552963b3d186a60efc1306870bbd1.png' />KINGS XI PUNJAB vs <img src='https://www.rajasthanroyals.com/assets/images/RR_blue%20(1).png' />RAJASTHAN ROYALS</div>",
+                
+                "<div><span>51</span><span>DUBAI</span><br /><img src='https://cdn.freelogovectors.net/wp-content/uploads/2019/09/delhi-capitals-logo.png' />DELHI CAPITALS vs <img src='https://i.pinimg.com/originals/28/09/a8/2809a841bb08827603ccac5c6aee8b33.png' />MUMBAI INDIANS</div><div><span>52</span><span>SHARJAH</span><br /><img src='https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Royal_Challengers_Bangalore_2020.svg/1200px-Royal_Challengers_Bangalore_2020.svg.png' />ROYAL CHALLENGERS BANGALORE vs <img src='https://www.searchpng.com/wp-content/uploads/2019/02/Sunrisers-Hyderabad-Logo-PNG-Image.png' />SUNRISERS HYDERABAD</div>",
+                
+                "<div><span>53</span><span>ABU DHABI</span><br /><img src='https://www.searchpng.com/wp-content/uploads/2019/02/Chennai-Super-Kings-Logo-PNG-Image-.png' />CHENNAI SUPER KINGS vs <img src='https://i.pinimg.com/originals/25/d5/52/25d552963b3d186a60efc1306870bbd1.png' />KINGS XI PUNJAB</div><div><span>54</span><span>DUBAI</span><br /><img src='https://cdn.freelogovectors.net/wp-content/uploads/2018/04/Kolkata-Knight-Riders-Logo_freelogovectors.net_.png' />KOLKATA KNIGHT RIDERS vs <img src='https://www.rajasthanroyals.com/assets/images/RR_blue%20(1).png' />RAJASTHAN ROYALS</div>",
+                
+                "<div><span>55</span><span>ABU DHABI</span><br /><img src='https://cdn.freelogovectors.net/wp-content/uploads/2019/09/delhi-capitals-logo.png' />DELHI CAPITALS vs <img src='https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Royal_Challengers_Bangalore_2020.svg/1200px-Royal_Challengers_Bangalore_2020.svg.png' />ROYAL CHALLENGERS BANGALORE</div>",
+                
+                "<div><span>56</span><span>SHARJAH</span><br /><img src='https://www.searchpng.com/wp-content/uploads/2019/02/Sunrisers-Hyderabad-Logo-PNG-Image.png' />SUNRISERS HYDERABAD vs <img src='https://i.pinimg.com/originals/28/09/a8/2809a841bb08827603ccac5c6aee8b33.png' />MUMBAI INDIANS</div>" );
+            
+            var date = new Date();
+            var startDate = new Date("Sep 19, 2020 04:20:00");
+            
+            var daysPassed = date.getTime() - startDate.getTime();
+            daysPassed = Math.floor( daysPassed / (1000 * 60 * 60 * 24));
+            document.getElementById("iplt20").innerHTML = arr[daysPassed];
+            
+            var text = document.querySelector('.text');
+            if(daysPassed < 0) {
+                text.innerHTML = "IPL 2020 Starts from 19th September!";
+                document.getElementById('iplt20').innerHTML = "";   }
+            else if(daysPassed > 55) {
+                text.innerHTML = "Scheduled Completed!<br />AQUEEL MOHAMMED";
+                document.getElementById('iplt20').innerHTML = "";   }
+            else {
+                text.innerHTML = Date();
+                text.style.fontSize = '16px';
+            }
+        </script>
+    </body>
+</html>

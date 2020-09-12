@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="icon" href="https://icons.iconarchive.com/icons/marcus-roberto/google-play/512/Google-Calendar-icon.png" sizes="16x16">
+    <title>Progress</title>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style type="text/css">
+            @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: 'PT Sans', sans-serif;
+                box-sizing: border-box;
+            }
+            body {
+                background-color: #111;
+                min-height: 100vh;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 84vw;
+                margin: 24px auto;
+                border: 1px solid #000;
+                box-shadow: 4px 4px 14px 4px #000;
+            }
+            .percentage, .passed-days, .left-days {
+                width: 80%;
+                margin: 8px 0;
+                text-align: center;
+                color: #f7f7f7;
+                font-weight: 900;
+                font-size: 4.2rem;
+                letter-spacing: 2px;
+            }
+            .passed-days, .left-days {
+                text-transform: uppercase;
+                font-size: 1.6rem;
+                font-weight: 400;
+            }
+            .progress-bar {
+                position: relative;
+                width: 80%;
+                height: 24px;
+                background-color: #fff;
+                border: 2px solid #fff;
+                border-radius: 4px;
+            }
+            .bar {
+                position: absolute;
+                height: 20px;
+                background-color: #000;
+                border-radius: 4px;
+                width: 0;
+                transition: 4s ease;
+            }
+            .today-div, .boxes div {
+                background-color: #000;
+                width: 100%;
+                padding: 8px;
+                margin: 2px;
+                text-align: center;
+            }
+            .boxes {
+                display: flex;
+                flex-basis: 50%;
+            }
+            h1 {
+                color: #f7f7f7;
+                font-weight: 900;
+                letter-spacing: 4px;
+                text-transform: uppercase;
+            }
+            .today, .startDate, .endDate {
+                color: #ccc;
+                font-size: 1.2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="percentage"></div>
+            <div class="progress-bar">
+                <div class="bar"></div>
+            </div>
+            <div class="passed-days"></div>
+            <div class="left-days"></div>
+            <div class="today-div"><h1>Today</h1><span class="today"></span></div>
+            <div class="boxes">
+                <div><h1>Start</h1><span class="startDate"></span></div>
+                <div><h1>End</h1><span class="endDate"></span></div>
+            </div>
+        </div>
+        <script type="text/javascript">var date = new Date();
+            
+            var startDate = new Date("Sep 12, 2020 13:20:00");
+            
+            var endDate = new Date("Oct 18, 2020 13:20:00");
+
+            var totalDays = endDate.getTime() - startDate.getTime();
+            totalDays = Math.floor( totalDays / (1000 * 60 * 60 * 24));
+
+            var daysPassed = date.getTime() - startDate.getTime();
+            daysPassed = Math.floor( daysPassed / (1000 * 60 * 60 * 24));
+
+            var daysLeft = endDate.getTime() - date.getTime();
+            daysLeft = Math.floor( daysLeft / (1000 * 60 * 60 * 24) + 1);
+
+            var percentage = Math.floor((daysPassed / totalDays) * 100);
+
+            document.querySelector(".percentage").innerHTML = percentage+"%";
+            document.querySelector(".passed-days").innerHTML = daysPassed+" Days Passed of "+totalDays+" Days";
+            document.querySelector(".left-days").innerHTML = daysLeft+" Days Left";
+            document.querySelector(".bar").style.width = percentage+"%";
+            document.querySelector(".today").innerHTML = date;
+            document.querySelector(".startDate").innerHTML = startDate;
+            document.querySelector(".endDate").innerHTML = endDate;</script>
+    </body>
+</html>
