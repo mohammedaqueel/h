@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="icon" href="https://cdn1.iconfinder.com/data/icons/business-seo-elements-1/128/a_arrow_bars_chart_growth_progress_success-512.png" sizes="16x16">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTqAPh0hVjN0gKnY9hOpo05GlNskRoTBKgBnw&usqp=CAU" sizes="16x16">
     <title>Counter</title>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -46,9 +46,13 @@
                 color: #fff;
                 text-align: center;
             }
-            .text span {
+            .text .span1, .text .span2 {
                 color: red;
                 text-transform: uppercase;
+            }
+            .text .span1 {
+                font-weight: bold;
+                color: yellow;
             }
         </style>
     </head>
@@ -56,7 +60,7 @@
         <div class="container">
             <div class="red-bar"></div>
             <div class="counter"><h1 id="counter"></h1></div>
-            <div class="text">If this counter breaks once again, then my health issue is <span>considerable</span>.</div>
+            <div class="text"><span class="span1">Warning: </span>If this counter breaks once again, then my health issue is <span class="span2">considerable</span>.</div>
         </div>
         <script type="text/javascript">
             var startDate = new Date("Oct 13, 2020 11:55:00");
